@@ -1,2 +1,2 @@
 # Smart-Parking-System
-Andriod app for an automated parking system
+App for an automated parking system
