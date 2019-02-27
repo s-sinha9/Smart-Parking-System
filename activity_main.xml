@@ -19,15 +19,8 @@ tools:context="shubham.system.myapplication.MainActivity">
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Scan QR code to Enter"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
-
-
-    <TextView
-        android:id="@+id/textViewAddress"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:textSize="30sp" />
 
 
 </LinearLayout>
