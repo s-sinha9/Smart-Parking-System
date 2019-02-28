@@ -1,38 +1,31 @@
 package shubham.system.myapplication;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.content.Intent;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 import android.widget.Toast;
+
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
-//variable to use
-//inTime
+public class ScanOutActivity extends AppCompatActivity {
 
-
-//implementing onclicklistener
-public class MainActivity extends AppCompatActivity {
-
-    //View Objects
     private Button buttonScan;
-    private TextView textViewHeader;
+   
 
     //qr code scanner object
     private IntentIntegrator qrScan;
 
-    public String inTime;
+    public String outTime;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_scan_out);
 
         //View objects
         buttonScan = (Button) findViewById(R.id.buttonScan);
-        textViewHeader = (TextView) findViewById(R.id.textViewHeader);
 
 
         //intializing scan object
@@ -57,11 +50,11 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(this, "Result Not Found", Toast.LENGTH_LONG).show();
             } else {
                 //if qr contains data
-                //textViewHeader.setText("Scan to Exit");
-                inTime=result.getContents();
-                String str= "In time is "+ inTime;
+                
+                outTime=result.getContents();
+                String str= "Out time is "+ outTime;
                 Intent intent= new Intent(this, EstCost.class);
-                intent.putExtra("inTime",inTime);
+                intent.putExtra("outTime",outTime);
                 startActivity(intent);
                 //textViewHeader.setText(str);
 

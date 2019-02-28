@@ -1,25 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-    tools:context="shubham.system.myapplication.Main2Activity">
-
+    tools:context="shubham.system.myapplication.EstCost">
 
     <TextView
-        android:id="@+id/inTimeText"
+        android:id="@+id/text_view_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="In time is"
-        android:textSize="30sp" />
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="Time" />
 
     <TextView
-        android:id="@+id/valueText"
+        android:id="@+id/text_view_id1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/inTimeText"
-        android:text=""
-        android:textSize="30sp"/>
+        android:layout_below="@id/text_view_id"
+        android:layout_centerHorizontal="true"
+        android:text="Estimated Cost" />
+    <TextView
+        android:id="@+id/mytextview1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/text_view_id" />
+
+    <TextView
+        android:id="@+id/mytextview2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/mytextview1"
+        android:layout_toRightOf="@id/text_view_id1"
+        />
+
+    <Button
+        android:id="@+id/button_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_view_id1"
+        android:layout_centerHorizontal="true"
+        android:text="EXIT" />
+
+
 </RelativeLayout>
